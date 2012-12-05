@@ -79,6 +79,21 @@ echo "Support additional LTE modes http://review.cyanogenmod.org/#/c/27512/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Phone refs/changes/12/27512/3 && git cherry-pick FETCH_HEAD
 cdb
 
+cdv packages/apps/Settings
+echo "Slider shortcuts http://review.cyanogenmod.org/#/c/27489/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/89/27489/3 && git cherry-pick FETCH_HEAD
+cdb
+
+cdv packages/apps/Phone
+echo "CDMA roaming changes http://review.cyanogenmod.org/#/c/27183/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Phone refs/changes/83/27183/1 && git cherry-pick FETCH_HEAD
+cdb
+
+cdv frameworks/base
+echo "Quicksettings changes http://review.cyanogenmod.org/#/c/27063/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/63/27063/18 && git cherry-pick FETCH_HEAD
+cdb
+
 ##### SUCCESS ####
 SUCCESS=true
 exit 0
