@@ -61,23 +61,11 @@ set -e
 
 ################ Apply Patches Below ####################
 
-
-
-cdv vendor/cm
-echo "Fix eHRPD handoff http://review.cyanogenmod.org/#/c/27505/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_vendor_cm refs/changes/05/27505/2 && git cherry-pick FETCH_HEAD
-cdb
-
 cdv packages/apps/Settings
 echo "Slider shortcuts http://review.cyanogenmod.org/#/c/27489/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/89/27489/3 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/89/27489/4 && git cherry-pick FETCH_HEAD
 echo "re-enable LTE button http://review.cyanogenmod.org/#/c/27573/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/73/27573/3 && git cherry-pick FETCH_HEAD
-cdb
-
-cdv packages/apps/Phone
-echo "CDMA roaming changes http://review.cyanogenmod.org/#/c/27183/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Phone refs/changes/83/27183/1 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv frameworks/base
@@ -92,6 +80,11 @@ cdb
 cdv frameworks/opt/telephony
 echo "Fix NPE on call hangup http://review.cyanogenmod.org/#/c/27701/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/1 && git cherry-pick FETCH_HEAD
+cdb
+
+cdv kernel/samsung/d2
+echo "Revert splash screen"
+git revert --no-edit aa80e6fc80207c9aaecbb42f4355d42862e27c2b
 cdb
 
 ##### SUCCESS ####
