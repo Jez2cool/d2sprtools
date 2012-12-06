@@ -89,6 +89,11 @@ echo "Re-enable LTE button - FW http://review.cyanogenmod.org/#/c/27572/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/72/27572/3 && git cherry-pick FETCH_HEAD
 cdb
 
+cdv frameworks/opt/telephony
+echo "Fix NPE on call hangup http://review.cyanogenmod.org/#/c/27701/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/1 && git cherry-pick FETCH_HEAD
+cdb
+
 ##### SUCCESS ####
 SUCCESS=true
 exit 0
