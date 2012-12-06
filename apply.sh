@@ -79,12 +79,17 @@ cdb
 
 cdv frameworks/opt/telephony
 echo "Fix NPE on call hangup http://review.cyanogenmod.org/#/c/27701/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/1 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/2 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv kernel/samsung/d2
 echo "Revert splash screen"
 git revert --no-edit aa80e6fc80207c9aaecbb42f4355d42862e27c2b
+cdb
+
+cdv device/samsung/d2-common
+echo "Fix external sdcard http://review.cyanogenmod.org/#/c/27772/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_device_samsung_d2-common refs/changes/72/27772/1 && git cherry-pick FETCH_HEAD
 cdb
 
 ##### SUCCESS ####
