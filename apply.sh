@@ -68,20 +68,11 @@ echo "Fix eHRPD handoff http://review.cyanogenmod.org/#/c/27505/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_vendor_cm refs/changes/05/27505/2 && git cherry-pick FETCH_HEAD
 cdb
 
-
-cdv device/samsung/d2-common
-echo "LTE toggle changes http://review.cyanogenmod.org/#/c/27571/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_device_samsung_d2-common refs/changes/71/27571/1 && git cherry-pick FETCH_HEAD
-cdb
-
-cdv packages/apps/Phone
-echo "Support additional LTE modes http://review.cyanogenmod.org/#/c/27512/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Phone refs/changes/12/27512/3 && git cherry-pick FETCH_HEAD
-cdb
-
 cdv packages/apps/Settings
 echo "Slider shortcuts http://review.cyanogenmod.org/#/c/27489/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/89/27489/3 && git cherry-pick FETCH_HEAD
+echo "re-enable LTE button http://review.cyanogenmod.org/#/c/27573/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/73/27573/3 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv packages/apps/Phone
@@ -91,7 +82,11 @@ cdb
 
 cdv frameworks/base
 echo "Quicksettings changes http://review.cyanogenmod.org/#/c/27063/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/63/27063/18 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/63/27063/19 && git cherry-pick FETCH_HEAD
+echo "Quicksettings - framework http://review.cyanogenmod.org/#/c/27466/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/66/27466/4 && git cherry-pick FETCH_HEAD
+echo "Re-enable LTE button - FW http://review.cyanogenmod.org/#/c/27572/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/72/27572/3 && git cherry-pick FETCH_HEAD
 cdb
 
 ##### SUCCESS ####
