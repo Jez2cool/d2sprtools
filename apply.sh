@@ -75,8 +75,6 @@ echo "Quicksettings - framework http://review.cyanogenmod.org/#/c/27466/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/66/27466/4 && git cherry-pick FETCH_HEAD
 echo "Re-enable LTE button - FW http://review.cyanogenmod.org/#/c/27572/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/72/27572/3 && git cherry-pick FETCH_HEAD
-echo "QCom GPS HAL changes http://review.cyanogenmod.org/#/c/27778/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/78/27778/1 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv frameworks/opt/telephony
@@ -85,15 +83,8 @@ git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telep
 cdb
 
 cdv device/samsung/d2-common
-echo "GPS changes http://review.cyanogenmod.org/#/c/27814/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_device_samsung_d2-common refs/changes/14/27814/1 && git cherry-pick FETCH_HEAD
 echo "Fix vold.fstab"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_device_samsung_d2-common refs/changes/17/27817/1 && git cherry-pick FETCH_HEAD
-cdb
-
-cdv device/samsung/msm8960-common
-echo "GPS changes, HAL http://review.cyanogenmod.org/#/c/27812/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_device_samsung_msm8960-common refs/changes/12/27812/3 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv kernel/samsung/d2
