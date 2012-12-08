@@ -66,6 +66,11 @@ echo "Slider shortcuts http://review.cyanogenmod.org/#/c/27489/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/89/27489/4 && git cherry-pick FETCH_HEAD
 cdb
 
+cdv frameworks/base
+echo "Quicksettings - framework http://review.cyanogenmod.org/#/c/27466/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/66/27466/4 && git cherry-pick FETCH_HEAD
+cdb
+
 cdv frameworks/opt/telephony
 echo "Fix NPE on call hangup http://review.cyanogenmod.org/#/c/27701/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/2 && git cherry-pick FETCH_HEAD
