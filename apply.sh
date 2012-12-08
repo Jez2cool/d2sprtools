@@ -64,17 +64,6 @@ set -e
 cdv packages/apps/Settings
 echo "Slider shortcuts http://review.cyanogenmod.org/#/c/27489/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/89/27489/4 && git cherry-pick FETCH_HEAD
-echo "re-enable LTE button http://review.cyanogenmod.org/#/c/27573/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/73/27573/3 && git cherry-pick FETCH_HEAD
-cdb
-
-cdv frameworks/base
-echo "Quicksettings changes http://review.cyanogenmod.org/#/c/27063/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/63/27063/20 && git cherry-pick FETCH_HEAD
-echo "Quicksettings - framework http://review.cyanogenmod.org/#/c/27466/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/66/27466/4 && git cherry-pick FETCH_HEAD
-echo "Re-enable LTE button - FW http://review.cyanogenmod.org/#/c/27572/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/72/27572/3 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv frameworks/opt/telephony
