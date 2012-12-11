@@ -2,11 +2,15 @@ d2sprtools
 ==========
 
 CP patches from gerrit
+======================
 
 L710/d2spr Build Instructions
+=============================
 mkdir -p android/CM10
 cd android/CM10
 repo init -u git://github.com/CyanogenMod/android.git -b jellybean
+
+
 Modify your .repo/local_manifest.xml as follows:
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -22,6 +26,7 @@ Modify your .repo/local_manifest.xml as follows:
 
 
 Auto Apply Patches
+==================
 This script will remove any topic branches named auto, then apply all patches under topic branch auto.
 
 d2spr-tools/apply.sh
