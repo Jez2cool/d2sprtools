@@ -62,23 +62,22 @@ set -e
 ################ Apply Patches Below ####################
 
 cdv frameworks/base
-echo "Hardware key rebinding 1 http://review.cyanogenmod.org/#/c/27963/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/63/27963/4 && git cherry-pick FETCH_HEAD
+echo "SVDO support 1/2 http://review.cyanogenmod.org/#/c/27998/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/98/27998/2 && git cherry-pick FETCH_HEAD
+echo "Lockscreen long keypress 1/2 http://review.cyanogenmod.org/#/c/28053/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/53/28053/3 && git cherry-pick FETCH_HEAD
 cdb
-
-cdv packages/apps/Settings
-echo "Hardware key rebinding 2 http://review.cyanogenmod.org/#/c/27965/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/65/27965/6 && git cherry-pick FETCH_HEAD
-cdv
 
 cdv frameworks/opt/telephony
 echo "Fix NPE on call hangup http://review.cyanogenmod.org/#/c/27701/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/2 && git cherry-pick FETCH_HEAD
+echo "SVDO support 2/2 http://review.cyanogenmod.org/#/c/27997/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/97/27997/1 && git cherry-pick FETCH_HEAD
 cdb
 
-cdv kernel/samsung/d2
-echo "Revert splash screen"
-git revert --no-edit aa80e6fc80207c9aaecbb42f4355d42862e27c2b
+cdv packages/apps/Settings
+echo "Lockscreen long keypress 2/2 http://review.cyanogenmod.org/#/c/28051/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/51/28051/2 && git cherry-pick FETCH_HEAD
 cdb
 
 ##### SUCCESS ####
