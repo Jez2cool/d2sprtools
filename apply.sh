@@ -69,6 +69,16 @@ git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs
 cdb
 
 cdv frameworks/opt/telephony
+echo "Psuedo-multipart SMS http://review.cyanogenmod.org/#/c/28055/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/55/28055/1 && git cherry-pick FETCH_HEAD
+cdb
+
+cdv device/samsung/d2spr
+echo "Enable psuedo-multipart SMS http://review.cyanogenmod.org/#/c/28056/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_device_samsung_d2spr refs/changes/56/28056/1 && git cherry-pick FETCH_HEAD
+cdb
+
+cdv frameworks/opt/telephony
 echo "Fix NPE on call hangup http://review.cyanogenmod.org/#/c/27701/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/2 && git cherry-pick FETCH_HEAD
 echo "SVDO support 2/2 http://review.cyanogenmod.org/#/c/27997/"
