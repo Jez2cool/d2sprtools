@@ -64,8 +64,6 @@ set -e
 cdv frameworks/base
 echo "SVDO support 1/2 http://review.cyanogenmod.org/#/c/27998/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/98/27998/2 && git cherry-pick FETCH_HEAD
-echo "Lockscreen long keypress 1/2 http://review.cyanogenmod.org/#/c/28053/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/53/28053/3 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv frameworks/opt/telephony
@@ -83,11 +81,6 @@ echo "Fix NPE on call hangup http://review.cyanogenmod.org/#/c/27701/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/2 && git cherry-pick FETCH_HEAD
 echo "SVDO support 2/2 http://review.cyanogenmod.org/#/c/27997/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/97/27997/1 && git cherry-pick FETCH_HEAD
-cdb
-
-cdv packages/apps/Settings
-echo "Lockscreen long keypress 2/2 http://review.cyanogenmod.org/#/c/28051/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_apps_Settings refs/changes/51/28051/2 && git cherry-pick FETCH_HEAD
 cdb
 
 ##### SUCCESS ####
