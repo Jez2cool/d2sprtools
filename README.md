@@ -1,5 +1,5 @@
 L710/d2spr Build Instructions
-=======================
+=============================
 ```
 mkdir -p android/CM10
 cd android/CM10
