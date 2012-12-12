@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 
+
 unset SUCCESS
 on_exit() {
   if [ -z "$SUCCESS" ]; then
