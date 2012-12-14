@@ -71,6 +71,8 @@ echo "Psuedo-multipart SMS http://review.cyanogenmod.org/#/c/28175/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/75/28175/1 && git cherry-pick FETCH_HEAD
 echo "SVDO support 2/2 http://review.cyanogenmod.org/#/c/28216/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/16/28216/1 && git cherry-pick FETCH_HEAD
+echo "Fix CMDA/LTE Strength http://review.cyanogenmod.org/#/c/28237/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/37/28237/1 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv device/samsung/d2spr
