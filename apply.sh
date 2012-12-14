@@ -64,6 +64,8 @@ set -e
 cdv frameworks/base
 echo "SVDO support 1/2 http://review.cyanogenmod.org/#/c/28215/"
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/15/28215/1 && git cherry-pick FETCH_HEAD
+echo "CellInfoLte - Turn off debug http://review.cyanogenmod.org/#/c/28269/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/69/28269/1 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv frameworks/opt/telephony
