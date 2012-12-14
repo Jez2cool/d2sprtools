@@ -62,25 +62,20 @@ set -e
 ################ Apply Patches Below ####################
 
 cdv frameworks/base
-echo "SVDO support 1/2 http://review.cyanogenmod.org/#/c/27998/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/98/27998/2 && git cherry-pick FETCH_HEAD
+echo "SVDO support 1/2 http://review.cyanogenmod.org/#/c/28215/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/15/28215/1 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv frameworks/opt/telephony
-echo "Psuedo-multipart SMS http://review.cyanogenmod.org/#/c/28055/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/55/28055/1 && git cherry-pick FETCH_HEAD
+echo "Psuedo-multipart SMS http://review.cyanogenmod.org/#/c/28175/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/75/28175/1 && git cherry-pick FETCH_HEAD
+echo "SVDO support 2/2 http://review.cyanogenmod.org/#/c/28216/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/16/28216/1 && git cherry-pick FETCH_HEAD
 cdb
 
 cdv device/samsung/d2spr
-echo "Enable psuedo-multipart SMS http://review.cyanogenmod.org/#/c/28056/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_device_samsung_d2spr refs/changes/56/28056/1 && git cherry-pick FETCH_HEAD
-cdb
-
-cdv frameworks/opt/telephony
-echo "Fix NPE on call hangup http://review.cyanogenmod.org/#/c/27701/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/01/27701/2 && git cherry-pick FETCH_HEAD
-echo "SVDO support 2/2 http://review.cyanogenmod.org/#/c/27997/"
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_opt_telephony refs/changes/97/27997/1 && git cherry-pick FETCH_HEAD
+echo "Enable psuedo-multipart SMS http://review.cyanogenmod.org/#/c/28176/"
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_device_samsung_d2spr refs/changes/76/28176/1 && git cherry-pick FETCH_HEAD
 cdb
 
 ##### SUCCESS ####
