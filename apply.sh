@@ -1,5 +1,4 @@
 #!/bin/bash
-# Update 1 
 
 
 
